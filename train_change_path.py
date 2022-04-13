@@ -7,7 +7,7 @@ import glob
 import argparse
 import os
 from keras.preprocessing.text import tokenizer_from_json
-outside_path = './majorp'
+output_path = './majorp'
 # This will force execute tensorflow in eager execution mode 
 # tf.enable_eager_execution()
 
