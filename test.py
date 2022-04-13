@@ -9,7 +9,7 @@ import glob
 import argparse
 # This will force execute tensorflow in eager execution mode 
 # tf.enable_eager_execution()
-
+output_path = './majorp'
 parser = argparse.ArgumentParser(description='Interactive Translation Bot')
 parser.add_argument('--name',type=str,required=True,help='Name of the Dataset')
 parser.add_argument('--min_len',type=int,default=1,help='Minimum number of words in a scentence')
@@ -19,12 +19,12 @@ args = parser.parse_args()
 
 
 # load the tokenziers
-with open('processed_data_'+args.name+'/inp_lang.json', 'r') as f:
+with open(f'{output_path}/processed_data_'+args.name+'/inp_lang.json', 'r') as f:
     json_data_i = json.load(f)
     inp_lang = tokenizer_from_json(json_data_i)
     f.close()
     
-with open('processed_data_'+args.name+'/targ_lang.json', 'r') as f:
+with open(f'{output_path}/processed_data_'+args.name+'/targ_lang.json', 'r') as f:
     json_data_t = json.load(f)
     targ_lang = tokenizer_from_json(json_data_t)
     f.close()
