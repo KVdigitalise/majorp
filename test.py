@@ -8,7 +8,7 @@ from keras.preprocessing.text import tokenizer_from_json
 import glob
 import argparse
 # This will force execute tensorflow in eager execution mode 
-tf.enable_eager_execution()
+# tf.enable_eager_execution()
 
 parser = argparse.ArgumentParser(description='Interactive Translation Bot')
 parser.add_argument('--name',type=str,required=True,help='Name of the Dataset')
